@@ -40,19 +40,6 @@ class TwitterProducer() {
     //Create a Kafka Producer
     val producer: KafkaProducer[String, String] = this.createKafkaProducer
 
-    //    Runtime.getRuntime.addShutdownHook(new Thread(() => {
-    //      def foo() = {
-    //        logger.info("stopping application")
-    //        logger.info("shutting down client from twitter")
-    //        client.stop()
-    //        logger.info("closing producer")
-    //        producer.close()
-    //        logger.info("done")
-    //      }
-    //
-    //      foo()
-    //    }))
-
 //loop to send tweets to kafka
     // on a different thread,or multiple different thread
     while ( {
