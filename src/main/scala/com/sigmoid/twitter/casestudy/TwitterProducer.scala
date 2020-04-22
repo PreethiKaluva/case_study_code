@@ -61,8 +61,8 @@ class TwitterProducer() {
       var msg: String = null
       try msg = msgQueue.poll(5L, TimeUnit.SECONDS).asInstanceOf[String]
       catch {
-        case var6: InterruptedException =>
-          var6.printStackTrace()
+        case variable: InterruptedException =>
+          variable.printStackTrace()
           client.stop()
       }
       if (msg != null) {
